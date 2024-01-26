@@ -1,6 +1,7 @@
 package com.example.codealphafitnesstrackerapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
@@ -21,9 +22,10 @@ class MainActivity : AppCompatActivity() {
         courseList = ArrayList<GridViewModel>()
 
 
-        courseList = courseList + GridViewModel("PRs", R.drawable.heart)
-        courseList = courseList + GridViewModel("Calculate BPM", R.drawable.heart)
-        courseList = courseList + GridViewModel("Record Workout", R.drawable.heart)
+        courseList = courseList + GridViewModel("PRs", R.drawable.heart , PRActivity::class.java)
+        courseList = courseList + GridViewModel("Calculate BPM", R.drawable.heart ,
+            BPMActivity::class.java)
+//        courseList = courseList + GridViewModel("Record Workout", R.drawable.heart)
 //        courseList = courseList + GridViewModel("Python", R.drawable.python)
 //        courseList = courseList + GridViewModel("Javascript", R.drawable.js)
 
@@ -33,7 +35,15 @@ class MainActivity : AppCompatActivity() {
         courseGRV.adapter = courseAdapter
 
 
-//        courseGRV.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+        courseGRV.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            val targetActivityClass = courseList[position].targetActivity
+
+            val intent = Intent(this@MainActivity, targetActivityClass)
+            startActivity(intent)
+
+            // can finish the curr activity if needed
+             finish()
+        }
 
 
 

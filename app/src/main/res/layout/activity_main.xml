@@ -6,14 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <GridView
-        android:id="@+id/idGRV"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:horizontalSpacing="6dp"
-        android:numColumns="2"
-        android:verticalSpacing="6dp" />
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Fitness Pal"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your One-Stop App for all your fitness Needs!"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:textColor="@color/red"
+            android:layout_marginBottom="20dp"/>
+
+        <GridView
+            android:id="@+id/idGRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="6dp"
+            android:numColumns="2"
+            android:verticalSpacing="6dp" />
+
+    </LinearLayout>
 
 
 
