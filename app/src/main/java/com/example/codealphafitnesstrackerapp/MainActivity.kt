@@ -22,10 +22,11 @@ class MainActivity : AppCompatActivity() {
         courseList = ArrayList<GridViewModel>()
 
 
-        courseList = courseList + GridViewModel("PRs", R.drawable.heart , PRActivity::class.java)
+        courseList = courseList + GridViewModel("PRs", R.drawable.gold_medal , PRActivity::class.java)
         courseList = courseList + GridViewModel("Calculate BPM", R.drawable.heart ,
             BPMActivity::class.java)
-//        courseList = courseList + GridViewModel("Record Workout", R.drawable.heart)
+        courseList = courseList + GridViewModel("Meal Plan", R.drawable.meal,
+            MealActivity::class.java)
 //        courseList = courseList + GridViewModel("Python", R.drawable.python)
 //        courseList = courseList + GridViewModel("Javascript", R.drawable.js)
 
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, targetActivityClass)
             startActivity(intent)
 
-            // can finish the curr activity if needed
+
              finish()
         }
 

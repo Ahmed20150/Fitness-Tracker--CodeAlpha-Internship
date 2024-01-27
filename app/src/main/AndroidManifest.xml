@@ -32,6 +32,11 @@
             android:label="BPMActivityLabel">
         </activity>
 
+        <activity
+            android:name=".MealActivity"
+            android:label="MealActivityLabel">
+        </activity>
+
     </application>
 
 </manifest>
