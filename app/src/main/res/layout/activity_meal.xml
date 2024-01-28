@@ -98,6 +98,14 @@
             android:text="Add Meal" />
 
         <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/red"
+        android:text="Clear Plan" />
+
+        <Button
             android:id="@+id/backBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
