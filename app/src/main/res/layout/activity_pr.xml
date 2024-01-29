@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -14,8 +14,28 @@
             android:layout_height="wrap_content"
             android:text="Your Personal Records"
             android:textSize="30sp"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:textColor="@color/red"/>
+
+
+        <TextView
+            android:id="@+id/prList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:text="Hello"
+            android:textSize="40dp"
+            android:textStyle="italic" />
+
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="@color/red"
+            android:layout_marginTop="250dp"/>
 
     </LinearLayout>
 

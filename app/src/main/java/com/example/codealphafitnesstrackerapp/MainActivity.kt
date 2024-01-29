@@ -1,12 +1,10 @@
 package com.example.codealphafitnesstrackerapp
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.GridView
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.gtappdevelopers.kotlingfgproject.GridRVAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +25,8 @@ class MainActivity : AppCompatActivity() {
             BPMActivity::class.java)
         courseList = courseList + GridViewModel("Meal Plan", R.drawable.meal,
             MealActivity::class.java)
-//        courseList = courseList + GridViewModel("Python", R.drawable.python)
+        courseList = courseList + GridViewModel("Record OutDoor Run", R.drawable.running_boy ,
+            RunActivity::class.java )
 //        courseList = courseList + GridViewModel("Javascript", R.drawable.js)
 
         val courseAdapter = GridRVAdapter(courseList = courseList, this@MainActivity)

@@ -37,6 +37,11 @@
             android:label="MealActivityLabel">
         </activity>
 
+        <activity
+            android:name=".RunActivity"
+            android:label="RunActivityLabel">
+        </activity>
+
     </application>
 
 </manifest>
