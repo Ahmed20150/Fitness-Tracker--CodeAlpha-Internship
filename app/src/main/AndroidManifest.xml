@@ -23,8 +23,8 @@
         </activity>
 
         <activity
-            android:name=".PRActivity"
-            android:label="PRActivityLabel">
+            android:name=".HydrationActivity"
+            android:label="HydrationActivityLabel">
         </activity>
 
         <activity

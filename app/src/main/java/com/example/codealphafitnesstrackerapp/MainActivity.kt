@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         courseList = ArrayList<GridViewModel>()
 
 
-        courseList = courseList + GridViewModel("PRs", R.drawable.gold_medal , PRActivity::class.java)
+        courseList = courseList + GridViewModel("Calculate Hydration", R.drawable.water ,
+            HydrationActivity::class.java)
         courseList = courseList + GridViewModel("Calculate BPM", R.drawable.heart ,
             BPMActivity::class.java)
         courseList = courseList + GridViewModel("Meal Plan", R.drawable.meal,
