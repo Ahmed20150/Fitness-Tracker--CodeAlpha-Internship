@@ -42,6 +42,17 @@
             android:label="RunActivityLabel">
         </activity>
 
+        <activity
+            android:name=".WorkoutActivity"
+            android:label="WorkoutActivityLabel">
+        </activity>
+
+        <activity
+            android:name=".HistoryActivity"
+            android:label="HistoryActivityLabel">
+        </activity>
+
+
     </application>
 
 </manifest>

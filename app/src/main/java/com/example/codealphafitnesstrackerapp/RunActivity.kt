@@ -2,6 +2,7 @@ package com.example.codealphafitnesstrackerapp
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.SystemClock
@@ -87,6 +88,7 @@ class RunActivity  : AppCompatActivity() {
             btnStart.isEnabled = false
             btnStop.isEnabled = true
             btnReset.isEnabled = false
+            btnStop.setTextColor(Color.RED)
 
 
             startTime = SystemClock.elapsedRealtime() - elapsedTime
@@ -103,6 +105,7 @@ class RunActivity  : AppCompatActivity() {
             btnStart.isEnabled = true
             btnStop.isEnabled = false
             btnReset.isEnabled = true
+            btnStop.setTextColor(Color.BLACK)
 
             handler.removeCallbacks(runnable)
 

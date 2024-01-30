@@ -28,7 +28,11 @@ class MainActivity : AppCompatActivity() {
             MealActivity::class.java)
         courseList = courseList + GridViewModel("Record OutDoor Run", R.drawable.running_boy ,
             RunActivity::class.java )
-//        courseList = courseList + GridViewModel("Javascript", R.drawable.js)
+        courseList = courseList + GridViewModel("Record Workout", R.drawable.gym ,
+            WorkoutActivity::class.java )
+        courseList = courseList + GridViewModel("Workout History", R.drawable.dumbell ,
+            HistoryActivity::class.java )
+
 
         val courseAdapter = GridRVAdapter(courseList = courseList, this@MainActivity)
 
