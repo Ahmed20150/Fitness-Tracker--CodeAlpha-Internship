@@ -1,6 +1,7 @@
 package com.example.codealphafitnesstrackerapp
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
@@ -160,20 +161,20 @@ class WorkoutActivity  : AppCompatActivity()  {
 
 
     private fun redirectBack() {
-//        val intent = Intent(this, MainActivity::class.java)
-//        startActivity(intent)
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
 
-        fun clear(){
-            val sharedPreferences = getPreferences(Context.MODE_PRIVATE)
-            val editor = sharedPreferences.edit()
-
-            editor.remove("workoutslist")
-            editor.apply()
-
-            workouts.clear()
-
-            Log.d("MYLIST",workouts.toString())
-        }
+//        fun clear(){
+//            val sharedPreferences = getPreferences(Context.MODE_PRIVATE)
+//            val editor = sharedPreferences.edit()
+//
+//            editor.remove("workoutslist")
+//            editor.apply()
+//
+//            workouts.clear()
+//
+//            Log.d("MYLIST",workouts.toString())
+//        }
     }
 
     private val runnable = object : Runnable {
