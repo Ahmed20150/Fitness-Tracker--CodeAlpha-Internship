@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
 import com.google.gson.Gson
 
-var maxRun = RunActivity.maxDuration
+
 class PRActivity: AppCompatActivity() {
     private lateinit var backBtn: Button
     private lateinit var prList: TextView
@@ -25,7 +25,7 @@ class PRActivity: AppCompatActivity() {
             redirectBack()
         }
 
-        loadPR()
+//        loadPR()
 
     }
 
@@ -38,10 +38,10 @@ class PRActivity: AppCompatActivity() {
 
     }
 
-    fun loadPR(){
-        var runText = "Maximum Run:"+ maxRun
-        prList.text= runText
-    }
+//    fun loadPR(){
+//        var runText = "Maximum Run:"+ maxRun
+//        prList.text= runText
+//    }
 
 
 
