@@ -8,40 +8,40 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gtappdevelopers.kotlingfgproject.GridRVAdapter
 
 class MainActivity : AppCompatActivity() {
-    lateinit var courseGRV: GridView
-    lateinit var courseList: List<GridViewModel>
+    lateinit var menuGRV: GridView
+    lateinit var menuList: List<GridViewModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        courseGRV = findViewById(R.id.idGRV)
-        courseList = ArrayList<GridViewModel>()
+        menuGRV = findViewById(R.id.idGRV)
+        menuList = ArrayList<GridViewModel>()
 
 
-        courseList = courseList + GridViewModel("Calculate Hydration", R.drawable.water ,
+        menuList = menuList + GridViewModel("Calculate Hydration", R.drawable.water ,
             HydrationActivity::class.java)
-        courseList = courseList + GridViewModel("Calculate BPM", R.drawable.heart ,
+        menuList = menuList + GridViewModel("Calculate BPM", R.drawable.heart ,
             BPMActivity::class.java)
-        courseList = courseList + GridViewModel("Meal Plan", R.drawable.meal,
+        menuList = menuList + GridViewModel("Meal Plan", R.drawable.meal,
             MealActivity::class.java)
-        courseList = courseList + GridViewModel("Record OutDoor Run", R.drawable.running_boy ,
+        menuList = menuList + GridViewModel("Record OutDoor Run", R.drawable.running_boy ,
             RunActivity::class.java )
-        courseList = courseList + GridViewModel("Record Workout", R.drawable.gym ,
+        menuList = menuList + GridViewModel("Record Workout", R.drawable.gym ,
             WorkoutActivity::class.java )
-        courseList = courseList + GridViewModel("Workout History", R.drawable.dumbell ,
+        menuList = menuList + GridViewModel("Workout History", R.drawable.dumbell ,
             HistoryActivity::class.java )
 
 
-        val courseAdapter = GridRVAdapter(courseList = courseList, this@MainActivity)
+        val courseAdapter = GridRVAdapter(courseList = menuList, this@MainActivity)
 
 
-        courseGRV.adapter = courseAdapter
+        menuGRV.adapter = courseAdapter
 
 
-        courseGRV.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-            val targetActivityClass = courseList[position].targetActivity
+        menuGRV.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            val targetActivityClass = menuList[position].targetActivity
 
             val intent = Intent(this@MainActivity, targetActivityClass)
             startActivity(intent)
